@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Deploy Next.js application
+source $HESTIA/func/main.sh
+source $HESTIA/plugins/nextjs/func/nextjs.sh
+
+# Process arguments
+domain=$1
+user=$2
+app_name=$3
+
+# Run deployment
+deploy_nextjs "$domain" "$user" "$app_name"

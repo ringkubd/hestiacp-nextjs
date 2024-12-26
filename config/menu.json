@@ -1,0 +1,12 @@
+{
+	"NEXT_JS": {
+		"name": "Next.js",
+		"icon": "fas fa-node",
+		"items": {
+			"DEPLOYMENTS": {
+				"name": "Deployments",
+				"link": "/plugin/nextjs/"
+			}
+		}
+	}
+}

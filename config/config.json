@@ -1,0 +1,11 @@
+{
+	"name": "Next.js Deployment",
+	"version": "1.0.0",
+	"description": "Next.js deployment manager with PM2",
+	"permissions": {
+		"v-deploy-nextjs": "system",
+		"pm2": "system"
+	},
+	"min_version": "1.5.0",
+	"repository": "https://github.com/ringkubd/hestia-nextjs"
+}
