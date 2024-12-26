@@ -30,5 +30,16 @@ chmod 755 $HESTIA/plugins/nextjs/func/*.sh
 # Install dependencies globally
 npm install -g pnpm yarn
 
+# Register plugin menu
+$HESTIA/bin/v-add-user-plugin-menu admin nextjs
+
+# Clear HestiaCP cache
+rm -f $HESTIA/data/cache/menu/*
+
+# Restart web server
+systemctl restart nginx php$PHP_VERSION-fpm
+
 # Log installation
 log_event "system" "info" "Next.js plugin installation completed"
+
+echo "Next.js plugin installed successfully. Please refresh your HestiaCP panel."
