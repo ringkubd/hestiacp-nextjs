@@ -11,8 +11,19 @@ apt-get install -y nodejs npm
 npm install -g pm2
 
 # Create plugin directories
-mkdir -p $HESTIA/plugins/nextjs/{config,web/templates,func,bin}
+# Create subdirectories individually
+sudo mkdir -p $HESTIA/plugins/nextjs/config
+sudo mkdir -p $HESTIA/plugins/nextjs/web/templates
+sudo mkdir -p $HESTIA/plugins/nextjs/func
+sudo mkdir -p $HESTIA/plugins/nextjs/bin
+
 chmod 751 $HESTIA/plugins/nextjs
+
+# Verify directories
+if [ ! -d "$HESTIA/plugins/nextjs/web/templates" ]; then
+	echo "Failed to create directories"
+	exit 1
+fi
 
 # Copy plugin files
 cp -rf config/* $HESTIA/plugins/nextjs/config/
